@@ -1,0 +1,163 @@
+# Rules specific to this repo
+/artifacts
+/data
+/.settings
+/sso
+/sso_wc
+/sso_keys
+/test_sso_wc
+/test_sso
+/qa_reports
+/conf/aws
+/conf/ldap
+/tests/conf/sso/test/tmp/*
+/docker/dependencies/*
+/docker/fixtures/*
+/_docs_build
+# the test DB, if using --reuse-db
+/test_db.sqlite*
+# logs in development
+/logs
+# where static files are generated
+/static
+/static_build
+/htdocs
+/deps
+/.moat_configuration.env
+/.project.env
+/.local.env
+# cldr files for update_from_cldr
+/cldr
+/docker/devtools/samplesite/test-data
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+environ/
+environ3/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# Mintel specific paths.
+/activate
+/activate3
+/docs-build
+/fabric/activate
+/reports
+/sso_config
+/metadata/test/sso*
+/metadata/dev/sso*
+
+# Editor files.
+.idea
+*.swp
+*.swo
+
+# SQLite DBs.
+*.db
+*.db-journal
+test_db.sqlite-journal
+test_db.sqlite
+
+# JavaScript specific ignores.
+node_modules

@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  rxpy-web:
+    ipc: host
+    image: jira-tool/devel
+    stop_signal: SIGINT
+    labels:
+      com.dnsdock.image: "rxpy"
+      com.dnsdock.region: "example"
+    ports:
+      - "8002:8000"
+    volumes:
+      - .:/app/
+    stdin_open: true
+    tty: true
