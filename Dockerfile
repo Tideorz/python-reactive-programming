@@ -1,5 +1,5 @@
 ###############################################################################
-# 
+#
 # Python base
 # Full official Debian-based Python image
 FROM python:3.6-slim-buster AS base
@@ -17,7 +17,7 @@ LABEL org.opencontainers.image.revision="$VCS_REF" \
       org.opencontainers.image.description="Python RxPy Demo" \
       org.opencontainers.image.url="https://github.com/tideorz/python-reactive-programming" \
       org.opencontainers.image.source="https://github.com/Tideorz/python-reactive-programming.git" \
-      
+
       org.opencontainers.image.vendor="Tideorz" \
       org.label-schema.schema-version="1.0" \
       org.label-schema.name="rxpy-web" \
@@ -48,24 +48,21 @@ RUN groupadd -g 1000 test \
 
 WORKDIR /app
 
-CMD ["python", "server.py"]
+CMD ["python", "/app/rxpy_demo/server.py"]
 
 
 ###########################################################################
 # BUILDER  BASE - finish pipenv stuff
 ###########################################################################
-FROM base AS devel 
+FROM base AS devel
 
 ARG BUILD_DEPS="\
     build-essential \
     libcurl4 \
     libssl-dev \
-    libc6-dev \ 
+    libc6-dev \
     libcurl4-openssl-dev \
 "
-
-# Install OS package dependencies.
-# Do all of this in one RUN to limit final image size.
 
 # Ignore until we determine required versions
 # hadolint ignore=DL3008

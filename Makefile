@@ -64,3 +64,6 @@ lock:  ## Run pipenv lock
 			pipenv lock
 .PHONY: lock
 
+debug:  ## debug pdb
+			@$(DOCKER_COMPOSE) run --service-ports --rm ${EXEC_SERVICE}
+.PHONY: debug

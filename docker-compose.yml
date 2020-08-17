@@ -3,13 +3,13 @@ version: "3.7"
 services:
   rxpy-web:
     ipc: host
-    image: jira-tool/devel
+    image: rxpy-web/devel
     stop_signal: SIGINT
     labels:
       com.dnsdock.image: "rxpy"
-      com.dnsdock.region: "example"
+      com.dnsdock.region: "mintel"
     ports:
-      - "8002:8000"
+      - "8080:8080"
     volumes:
       - .:/app/
     stdin_open: true
